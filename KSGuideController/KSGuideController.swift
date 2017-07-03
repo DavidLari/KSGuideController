@@ -151,7 +151,7 @@ public class KSGuideController: UIViewController {
     private func configViews() {
         view.backgroundColor = UIColor(white: 0, alpha: backgroundAlpha)
         
-        arrowImageView.image = UIImage(named: arrowImageName)?.ks_image(with: arrowColor)
+        arrowImageView.image = UIImage(named: arrowImageName, in: Bundle(for: KSGuideController.self), compatibleWith: nil)?.ks_image(with: arrowColor)
         arrowImageView.tintColor = arrowColor
         view.addSubview(arrowImageView)
         
